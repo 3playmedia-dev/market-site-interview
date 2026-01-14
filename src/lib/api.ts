@@ -24,6 +24,14 @@ export interface NewsletterResponse {
   message: string;
 }
 
+export interface Testimonial {
+  id: number;
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}
+
 class ApiError extends Error {
   statusCode: number;
 
@@ -67,6 +75,13 @@ export const api = {
         body: JSON.stringify({ email }),
       });
       return handleResponse<NewsletterResponse>(response);
+    },
+  },
+
+  testimonials: {
+    list: async (): Promise<Testimonial[]> => {
+      const response = await fetch('/api/testimonials');
+      return handleResponse<Testimonial[]>(response);
     },
   },
 };
