@@ -1,0 +1,131 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+---
+
+<MarketingLayout title="About Us - TestCo" description="Learn about our mission and team">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-background to-muted/30 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1
+        class="text-4xl font-bold tracking-tight text-foreground sm:text-5xl"
+        style="font-family: var(--font-heading);"
+      >
+        About TestCo
+      </h1>
+      <p
+        class="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground"
+        style="font-family: var(--font-accent-serif);"
+      >
+        We're on a mission to make building great products accessible to everyone.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-3xl">
+        <h2
+          class="text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+          style="font-family: var(--font-heading);"
+        >
+          Our Story
+        </h2>
+        <div class="mt-6 space-y-4 text-muted-foreground">
+          <p>
+            TestCo was founded in 2020 with a simple belief: great products shouldn't require
+            massive teams or unlimited budgets. We saw small teams struggling with the same
+            challenges as large enterprises, but without the resources to solve them.
+          </p>
+          <p>
+            Today, we serve thousands of teams worldwide, from two-person startups to
+            Fortune 500 companies. Our platform has helped ship millions of features
+            and delighted countless users.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="bg-muted/30 py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-3xl">
+        <h2
+          class="text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+          style="font-family: var(--font-heading);"
+        >
+          Our Values
+        </h2>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2">
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold text-foreground" style="font-family: var(--font-heading);">
+              User First
+            </h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Every decision we make starts with the question: "How does this help our users?"
+            </p>
+          </div>
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold text-foreground" style="font-family: var(--font-heading);">
+              Ship Fast
+            </h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              We believe in rapid iteration. Ship early, gather feedback, improve constantly.
+            </p>
+          </div>
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold text-foreground" style="font-family: var(--font-heading);">
+              Quality Matters
+            </h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Fast doesn't mean sloppy. We maintain high standards in everything we build.
+            </p>
+          </div>
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold text-foreground" style="font-family: var(--font-heading);">
+              Transparency
+            </h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              We communicate openly with our team, our users, and our community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2
+          class="text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+          style="font-family: var(--font-heading);"
+        >
+          Meet the Team
+        </h2>
+        <p class="mt-4 text-muted-foreground">
+          We're a diverse group of builders, designers, and problem solvers.
+        </p>
+        <div class="mt-12 grid gap-8 sm:grid-cols-3">
+          <div class="text-center">
+            <div class="mx-auto h-24 w-24 rounded-full bg-muted" />
+            <h3 class="mt-4 font-semibold" style="font-family: var(--font-heading);">Alex Chen</h3>
+            <p class="text-sm text-muted-foreground" style="font-family: var(--font-accent-condensed);">CEO & Co-founder</p>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto h-24 w-24 rounded-full bg-muted" />
+            <h3 class="mt-4 font-semibold" style="font-family: var(--font-heading);">Sarah Kim</h3>
+            <p class="text-sm text-muted-foreground" style="font-family: var(--font-accent-condensed);">CTO & Co-founder</p>
+          </div>
+          <div class="text-center">
+            <div class="mx-auto h-24 w-24 rounded-full bg-muted" />
+            <h3 class="mt-4 font-semibold" style="font-family: var(--font-heading);">Jordan Lee</h3>
+            <p class="text-sm text-muted-foreground" style="font-family: var(--font-accent-condensed);">Head of Design</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

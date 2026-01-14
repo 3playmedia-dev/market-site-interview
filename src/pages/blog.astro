@@ -1,0 +1,97 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import PostsWidget from '../components/islands/PostsWidget';
+import UserMetrics from '../components/islands/UserMetrics';
+---
+
+<MarketingLayout title="Blog - TestCo" description="Insights, tutorials, and updates from the TestCo team">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-background to-muted/30 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1
+        class="text-4xl font-bold tracking-tight text-foreground sm:text-5xl"
+        style="font-family: var(--font-heading);"
+      >
+        Our Blog
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+        Insights, tutorials, and updates from the team.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-border bg-card py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="mb-8 text-center text-xl font-semibold" style="font-family: var(--font-heading);">
+        Blog Performance
+      </h2>
+      <UserMetrics client:load />
+    </div>
+  </section>
+
+  <!-- Posts Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-3xl">
+        <h2
+          class="mb-8 text-2xl font-bold tracking-tight text-foreground"
+          style="font-family: var(--font-heading);"
+        >
+          Recent Posts
+        </h2>
+        <PostsWidget client:load />
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="bg-muted/30 py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-3xl">
+        <h2
+          class="mb-8 text-2xl font-bold tracking-tight text-foreground"
+          style="font-family: var(--font-heading);"
+        >
+          Browse by Category
+        </h2>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="#"
+            class="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            style="font-family: var(--font-accent-condensed);"
+          >
+            Engineering
+          </a>
+          <a
+            href="#"
+            class="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            style="font-family: var(--font-accent-condensed);"
+          >
+            Design
+          </a>
+          <a
+            href="#"
+            class="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            style="font-family: var(--font-accent-condensed);"
+          >
+            Product
+          </a>
+          <a
+            href="#"
+            class="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            style="font-family: var(--font-accent-condensed);"
+          >
+            Company
+          </a>
+          <a
+            href="#"
+            class="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            style="font-family: var(--font-accent-condensed);"
+          >
+            Tutorials
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

@@ -1,0 +1,150 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import StatsCounter from '../components/islands/StatsCounter';
+import PostsWidget from '../components/islands/PostsWidget';
+import NewsletterForm from '../components/islands/NewsletterForm';
+import { Button } from '../components/ui/button';
+---
+
+<MarketingLayout title="TestCo - Build Better Products">
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-background to-muted/30 py-20 md:py-32">
+    <div class="container mx-auto px-4 text-center">
+      <h1
+        class="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
+        style="font-family: var(--font-heading);"
+      >
+        Build products that
+        <span class="text-primary">customers love</span>
+      </h1>
+      <p
+        class="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground"
+        style="font-family: var(--font-body);"
+      >
+        The all-in-one platform for teams who want to ship faster, iterate smarter,
+        and deliver exceptional user experiences.
+      </p>
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a
+          href="/pricing"
+          class="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          Start Free Trial
+        </a>
+        <a
+          href="/about"
+          class="inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="border-y border-border bg-card py-12">
+    <div class="container mx-auto px-4">
+      <StatsCounter client:load />
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h2
+          class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+          style="font-family: var(--font-heading);"
+        >
+          Everything you need
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-muted-foreground">
+          Powerful features to help you build, test, and ship with confidence.
+        </p>
+      </div>
+      <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="rounded-lg border border-border bg-card p-6">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">Lightning Fast</h3>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Optimized for speed with edge caching and smart preloading.
+          </p>
+        </div>
+        <div class="rounded-lg border border-border bg-card p-6">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">Secure by Default</h3>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Enterprise-grade security with end-to-end encryption.
+          </p>
+        </div>
+        <div class="rounded-lg border border-border bg-card p-6">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold" style="font-family: var(--font-heading);">Analytics Built In</h3>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Real-time insights to understand your users better.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Preview Section -->
+  <section class="bg-muted/30 py-20">
+    <div class="container mx-auto px-4">
+      <div class="mb-12 text-center">
+        <h2
+          class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+          style="font-family: var(--font-heading);"
+        >
+          Latest from our blog
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-muted-foreground">
+          Insights, tutorials, and updates from the team.
+        </p>
+      </div>
+      <div class="mx-auto max-w-3xl">
+        <PostsWidget client:load />
+      </div>
+      <div class="mt-8 text-center">
+        <a
+          href="/blog"
+          class="inline-flex items-center text-sm font-medium text-primary hover:underline"
+        >
+          View all posts →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-xl text-center">
+        <h2
+          class="text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+          style="font-family: var(--font-heading);"
+        >
+          Stay in the loop
+        </h2>
+        <p class="mt-4 text-muted-foreground">
+          Get the latest updates, tips, and news delivered to your inbox.
+        </p>
+        <div class="mt-8">
+          <NewsletterForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

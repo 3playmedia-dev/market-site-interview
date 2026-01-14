@@ -1,0 +1,188 @@
+---
+import MarketingLayout from '../layouts/MarketingLayout.astro';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+---
+
+<MarketingLayout title="Pricing - TestCo" description="Simple, transparent pricing for teams of all sizes">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-background to-muted/30 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1
+        class="text-4xl font-bold tracking-tight text-foreground sm:text-5xl"
+        style="font-family: var(--font-heading);"
+      >
+        Simple, transparent pricing
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+        Start free, scale as you grow. No hidden fees, no surprises.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
+        <!-- Starter Plan -->
+        <Card className="flex flex-col">
+          <CardHeader>
+            <CardTitle>Starter</CardTitle>
+            <CardDescription>Perfect for side projects</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-1">
+            <div class="mb-6">
+              <span class="text-4xl font-bold" style="font-family: var(--font-heading);">$0</span>
+              <span class="text-muted-foreground">/month</span>
+            </div>
+            <ul class="space-y-3 text-sm text-muted-foreground">
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Up to 3 projects
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Basic analytics
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Community support
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter>
+            <Button variant="outline" className="w-full">Get Started</Button>
+          </CardFooter>
+        </Card>
+
+        <!-- Pro Plan -->
+        <Card className="flex flex-col border-primary shadow-lg">
+          <CardHeader>
+            <div class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+              Most Popular
+            </div>
+            <CardTitle>Pro</CardTitle>
+            <CardDescription>For growing teams</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-1">
+            <div class="mb-6">
+              <span class="text-4xl font-bold" style="font-family: var(--font-heading);">$29</span>
+              <span class="text-muted-foreground">/month</span>
+            </div>
+            <ul class="space-y-3 text-sm text-muted-foreground">
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Unlimited projects
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Advanced analytics
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Priority support
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Team collaboration
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter>
+            <Button className="w-full">Start Free Trial</Button>
+          </CardFooter>
+        </Card>
+
+        <!-- Enterprise Plan -->
+        <Card className="flex flex-col">
+          <CardHeader>
+            <CardTitle>Enterprise</CardTitle>
+            <CardDescription>For large organizations</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-1">
+            <div class="mb-6">
+              <span class="text-4xl font-bold" style="font-family: var(--font-heading);">Custom</span>
+            </div>
+            <ul class="space-y-3 text-sm text-muted-foreground">
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Everything in Pro
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                SSO & SAML
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Dedicated support
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                Custom integrations
+              </li>
+            </ul>
+          </CardContent>
+          <CardFooter>
+            <Button variant="outline" className="w-full">Contact Sales</Button>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bg-muted/30 py-20">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-3xl">
+        <h2
+          class="text-center text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
+          style="font-family: var(--font-heading);"
+        >
+          Frequently Asked Questions
+        </h2>
+        <div class="mt-12 space-y-6">
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold" style="font-family: var(--font-heading);">Can I change plans later?</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Yes! You can upgrade or downgrade your plan at any time. Changes take effect on your next billing cycle.
+            </p>
+          </div>
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold" style="font-family: var(--font-heading);">Is there a free trial?</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              Yes, all paid plans come with a 14-day free trial. No credit card required to start.
+            </p>
+          </div>
+          <div class="rounded-lg border border-border bg-card p-6">
+            <h3 class="font-semibold" style="font-family: var(--font-heading);">What payment methods do you accept?</h3>
+            <p class="mt-2 text-sm text-muted-foreground">
+              We accept all major credit cards, PayPal, and bank transfers for Enterprise customers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</MarketingLayout>

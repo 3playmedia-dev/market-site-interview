@@ -1,0 +1,192 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Clash Grotesk';
+  src: url('/src/fonts/ClashGrotesk-Variable.woff2') format('woff2-variations');
+  font-weight: 200 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Supreme';
+  src: url('/src/fonts/Supreme-Variable.woff2') format('woff2-variations');
+  font-weight: 100 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Serif';
+  src: url('/src/fonts/IBMPlexSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans Condensed';
+  src: url('/src/fonts/IBMPlexSans_Condensed-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/src/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * TestCo Theme
+ * Based on 3Play color foundation using OKLCH
+ * Primary brand color: #e6006f (magenta)
+ */
+
+@theme inline {
+  /* Font families */
+  --font-heading: 'Clash Grotesk', system-ui, sans-serif;
+  --font-body: 'Supreme', system-ui, sans-serif;
+  --font-accent-serif: 'IBM Plex Serif', Georgia, serif;
+  --font-accent-condensed: 'IBM Plex Sans Condensed', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Radius tokens */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* Color tokens mapped to CSS variables */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Light mode theme */
+  --background: oklch(0.995 0.003 350);
+  --foreground: oklch(0.18 0.005 350);
+  --card: oklch(0.993 0.002 350);
+  --card-foreground: oklch(0.22 0.005 350);
+  --popover: oklch(0.995 0.003 350);
+  --popover-foreground: oklch(0.18 0.005 350);
+
+  /* Primary: magenta #e6006f */
+  --primary: oklch(0.55 0.26 350);
+  --primary-foreground: oklch(1 0 0);
+
+  /* Secondary */
+  --secondary: oklch(0.93 0.02 350);
+  --secondary-foreground: oklch(0.15 0 0);
+
+  /* Muted */
+  --muted: oklch(0.96 0.015 310);
+  --muted-foreground: oklch(0.5 0.01 350);
+
+  /* Accent */
+  --accent: oklch(0.93 0.02 310);
+  --accent-foreground: oklch(0.22 0.005 350);
+
+  /* Destructive */
+  --destructive: oklch(0.63 0.26 29);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  /* Utility colors */
+  --border: oklch(0.87 0.015 350);
+  --input: oklch(0.6 0.08 350);
+  --ring: oklch(0.55 0.26 350);
+
+  /* Chart colors */
+  --chart-1: oklch(0.55 0.26 350);
+  --chart-2: oklch(0.6 0.12 185);
+  --chart-3: oklch(0.4 0.07 227);
+  --chart-4: oklch(0.83 0.19 84);
+  --chart-5: oklch(0.77 0.19 70);
+}
+
+.dark {
+  /* Dark mode theme */
+  --background: oklch(0.22 0 0);
+  --foreground: oklch(0.9 0 0);
+  --card: oklch(0.18 0 0);
+  --card-foreground: oklch(0.9 0 0);
+  --popover: oklch(0.18 0 0);
+  --popover-foreground: oklch(0.9 0 0);
+
+  /* Primary: slightly desaturated for dark */
+  --primary: oklch(0.52 0.22 350);
+  --primary-foreground: oklch(1 0 0);
+
+  /* Secondary */
+  --secondary: oklch(0.3 0 0);
+  --secondary-foreground: oklch(0.93 0 0);
+
+  /* Muted */
+  --muted: oklch(0.35 0 0);
+  --muted-foreground: oklch(0.93 0 0);
+
+  /* Accent */
+  --accent: oklch(0.3 0 0);
+  --accent-foreground: oklch(0.93 0 0);
+
+  /* Destructive */
+  --destructive: oklch(0.5 0.18 25);
+  --destructive-foreground: oklch(1 0 0);
+
+  /* Utility colors */
+  --border: oklch(0.3 0 0);
+  --input: oklch(0.35 0 0);
+  --ring: oklch(0.55 0.26 350);
+
+  /* Chart colors - adjusted for dark */
+  --chart-1: oklch(0.55 0.26 350);
+  --chart-2: oklch(0.7 0.17 162);
+  --chart-3: oklch(0.77 0.19 70);
+  --chart-4: oklch(0.63 0.27 304);
+  --chart-5: oklch(0.65 0.25 16);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  code, pre {
+    font-family: var(--font-mono);
+  }
+}
